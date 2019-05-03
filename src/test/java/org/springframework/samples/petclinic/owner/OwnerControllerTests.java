@@ -97,7 +97,7 @@ public class OwnerControllerTests {
             .param("city", "London")
         )
             .andExpect(status().isOk())
-            .andExpect(model().attributeHasErrors("nowner"))
+            .andExpect(model().attributeHasErrors("owner"))
             .andExpect(model().attributeHasFieldErrors("owner", "address"))
             .andExpect(model().attributeHasFieldErrors("owner", "telephone"))
             .andExpect(view().name("owners/createOrUpdateOwnerForm"));
